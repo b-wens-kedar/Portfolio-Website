@@ -1,0 +1,426 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  color: rgb(225, 225, 225, 0.85);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav,
+.pseudo-Nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 8vh;
+  padding: 0 2vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.pseudo-Nav {
+  justify-content: flex-start;
+  position: fixed;
+  left: 0;
+  z-index: 2;
+  background: rgb(18, 0, 90);
+  background: linear-gradient(
+    90deg,
+    rgb(18, 0, 64) 0%,
+    rgba(11, 106, 107, 1) 100%
+  );
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2vw;
+  list-style-type: none;
+}
+
+nav ul li a,
+nav ul li a i,
+.pseudo-Nav a {
+  text-decoration: none;
+  font-size: 3.5vh;
+  font-weight: bold;
+  transition: border 100ms;
+}
+
+nav ul li a i:hover,
+.pseudo-Nav a:hover {
+  border-bottom: 0.5vh solid rgba(245, 172, 142, 1);
+}
+
+nav ul li a i:hover {
+  padding-bottom: 0.8vh;
+}
+
+main {
+  background: rgb(230, 181, 178);
+  background: linear-gradient(
+    180deg,
+    rgba(230, 181, 178, 1) 0%,
+    rgba(255, 194, 173, 1) 20%,
+    rgba(234, 135, 113, 1) 40%,
+    rgba(245, 172, 142, 1) 60%,
+    rgba(247, 161, 165, 1) 80%,
+    rgba(195, 101, 70, 1) 100%
+  );
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 20vh 0vh;
+}
+
+#intro {
+  background-image: url(./images/layered-waves-haikei.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30vh;
+  margin-bottom: 15vh;
+  height: 70vh;
+  letter-spacing: 0.2em;
+  position: relative;
+  z-index: 3;
+}
+
+#intro h1 {
+  font-weight: bold;
+  font-size: 5vh;
+}
+
+#intro p {
+  margin-top: 7vh;
+  font-size: 3vh;
+  text-align: center;
+  line-height: 4.5vh;
+}
+
+.code-Intro,
+.activities-Intro,
+.awards-Intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  padding: 0vh 50vh 25vh 50vh;
+  line-height: 4vh;
+}
+
+.code-Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60vh 60vh;
+  gap: 5vh;
+  padding: 0vh 5vh;
+  background-color: none;
+}
+
+.content-Box {
+  background-color: rgba(0, 0, 0);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  border: 2vh solid none;
+  border-radius: 10vh;
+  box-shadow: 1vh 1vh 0.5vh rgba(0, 0, 0, 0.425);
+  transition: background 500ms, box-shadow 500ms;
+}
+
+.content-Box img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.82;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.content-Box h4 {
+  position: absolute;
+  top: 20vh;
+  transition: top 500ms;
+}
+
+.content-Box p {
+  position: absolute;
+  top: -30vh;
+  padding: 0 5%;
+  line-height: 4vh;
+  visibility: hidden;
+  transition: top 500ms;
+}
+
+.content-Box div {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vh;
+  position: absolute;
+  top: 40vh;
+  transition: top 500ms;
+}
+
+.content-Box div a {
+  background: linear-gradient(
+    90deg,
+    rgba(11, 106, 107, 1),
+    rgb(18, 0, 64),
+    rgba(11, 106, 107, 1)
+  );
+  background-size: 230%;
+  background-position: left;
+  padding: 2vh;
+  text-decoration: none;
+  border-radius: 1.5vh;
+  transition: background 400ms linear;
+}
+
+.content-Box:hover {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 1.5vh 1.5vh 0.5vh rgba(0, 0, 0, 0.425);
+}
+
+.content-Box:hover img {
+  opacity: 0.5;
+  transform: scale(1.3);
+}
+
+.content-Box:hover h4 {
+  top: 60vh;
+}
+
+.content-Box:hover p {
+  visibility: visible;
+  top: 15vh;
+}
+
+.content-Box:hover div {
+  top: 45vh;
+}
+
+.content-Box div a:hover {
+  background-position: right;
+}
+
+.activities-Content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.activities-left {
+  background-color: none;
+  padding: 2vh 5vh;
+  margin-left: 5vh;
+  border-top: 1.5px rgb(245, 172, 142) solid;
+  border-left: 1.5px rgb(245, 185, 155) solid;
+  border-radius: 5vh;
+  box-shadow: 1vh 1vh 0.5vh rgba(0, 0, 0, 0.425);
+  transition: box-shadow 500ms;
+}
+
+.activities-left:hover {
+  box-shadow: 1.5vh 1.5vh 0.5vh rgba(0, 0, 0, 0.425);
+}
+
+.activities-left #activities-Splide {
+  background-color: none;
+  height: 60%;
+  margin-bottom: 5vh;
+}
+
+.activities-left #activities-Splide .splide__track {
+  height: 100%;
+}
+
+.activities-left #activities-Splide .splide__slide {
+  background-color: none;
+  padding: 3vh;
+  margin: 3vh 0vh;
+  border-top: 1.5px rgb(245, 172, 142) solid;
+  border-left: 1.5px rgb(245, 185, 155) solid;
+  border-radius: 5vh;
+  box-shadow: 1vh 1vh rgba(0, 0, 0, 0.425);
+  transition: box-shadow 500ms;
+}
+
+.activities-left #activities-Splide .splide__slide:hover {
+  box-shadow: 1.5vh 1.5vh 0.5vh rgba(0, 0, 0, 0.425);
+}
+
+.activities-left #activities-Splide .splide__slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10vh 0vh;
+}
+
+.activities-left .volunteering p {
+  line-height: 4vh;
+}
+
+.activities-right {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  padding: 0vh 5vh;
+}
+
+.activities-right div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7vh;
+  box-shadow: 1vh 1vh 0.5vh rgba(0, 0, 0, 0.4);
+  transition: border 300ms, box-shadow 500ms;
+}
+
+.activities-right div img {
+  width: 100%;
+  border-radius: 7vh;
+  transition: opacity 500ms ease-in;
+}
+
+.activities-right div h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  font-size: 4vh;
+  transition: opacity 400ms ease-in;
+}
+
+.activities-right div p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 10%;
+  padding: 0vh 10vh;
+  text-align: center;
+  line-height: 4vh;
+  color: rgba(0, 0, 0, 0);
+  transition: color 400ms 200ms;
+}
+
+.activities-right div:hover {
+  box-shadow: 1.5vh 1.5vh 0.5vh rgba(0, 0, 0, 0.425);
+  border-top: 1.5px rgb(245, 185, 155) solid;
+  border-left: 1.5px rgb(245, 185, 155) solid;
+}
+
+.activities-right div:hover img,
+.activities-right div:hover h4 {
+  opacity: 0;
+}
+
+.activities-right div:hover p {
+  color: rgb(225, 225, 225, 0.85);
+}
+
+#awards-Splide {
+  background-color: none;
+  height: 85vh;
+}
+
+#awards-Splide .splide__track {
+  height: 100%;
+}
+
+#awards-Splide .splide__slide {
+  line-height: 4vh;
+  padding: 3vh;
+  margin: 3vh 0vh;
+  border-top: 1.5px rgb(246, 172, 176) solid;
+  border-left: 1.5px rgb(247, 175, 160) solid;
+  border-radius: 5vh;
+  box-shadow: 1vh 1vh rgba(0, 0, 0, 0.425);
+  transition: box-shadow 500ms;
+}
+
+#awards-Splide .splide__slide:hover {
+  box-shadow: 1.5vh 1.5vh 0.5vh rgba(0, 0, 0, 0.425);
+}
+
+#awards-Splide .splide__slide img {
+  width: 100%;
+  height: 45vh;
+  margin-bottom: 3vh;
+  border-radius: 5vh 0vh;
+}
+
+#about {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 13vh;
+  padding-bottom: 35vh;
+}
+
+#about p {
+  line-height: 5.5vh;
+  font-size: large;
+  padding: 0vh 38vh;
+}
+
+footer {
+  background: rgb(18, 0, 54);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  list-style-type: none;
+}
+
+footer ul li a i {
+  text-decoration: none;
+  font-size: 4vh;
+  transition: border 100ms;
+}
+
+footer ul li a i:hover {
+  padding-bottom: 0.8vh;
+  border-bottom: 0.5vh solid rgba(245, 172, 142, 1);
+}
+
+.footer-a {
+  background: linear-gradient(
+    90deg,
+    rgba(11, 106, 107, 1),
+    rgb(18, 0, 64),
+    rgba(11, 106, 107, 1)
+  );
+  background-size: 230%;
+  background-position: left;
+  padding: 2vh;
+  text-decoration: none;
+  border-radius: 5%;
+  transition: background 500ms;
+}
+
+.footer-a:hover {
+  background-position: right;
+}
