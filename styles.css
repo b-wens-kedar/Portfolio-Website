@@ -862,11 +862,6 @@ section {
     grid-template-rows: 52vh 52vh 52vh 52vh;
     padding: 0 3.5vw;
   }
-
-  .content-Box p {
-    font-size: calc(var(--text-sm) * 1.1);
-    line-height: var(--vspace-0_625);
-  }
 }
 
 .activities-Content {
