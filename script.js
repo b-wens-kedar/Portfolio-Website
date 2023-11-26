@@ -15,7 +15,7 @@ new Splide("#activities-Splide", {
   breakpoints: {
     1000: {
       padding: "3vw",
-      fixedHeight: "55vh",
+      fixedHeight: "50vh",
       autoScroll: {
         speed: 0.2,
       },
