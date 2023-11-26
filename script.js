@@ -15,9 +15,10 @@ new Splide("#activities-Splide", {
   breakpoints: {
     1000: {
       padding: "3vw",
-    },
-    autoScroll: {
-      speed: 0.2,
+      fixedHeight: "62vh",
+      autoScroll: {
+        speed: 0.2,
+      },
     },
   },
 }).mount(window.splide.Extensions);
@@ -38,6 +39,7 @@ new Splide("#awards-Splide", {
   breakpoints: {
     950: {
       perPage: 2,
+      fixedHeight: "67vh",
       autoScroll: {
         speed: 0.5,
       },
