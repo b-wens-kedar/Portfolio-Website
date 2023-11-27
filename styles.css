@@ -862,6 +862,10 @@ section {
     grid-template-rows: 45vh 45vh 45vh 45vh;
     padding: 0 3.5vw;
   }
+
+  .content-Box div a {
+    padding: 2vh 2vw;
+  }
 }
 
 .activities-Content {
